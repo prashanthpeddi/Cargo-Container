@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cargo Container History</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;/*change*/
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+    display: flex;
+            
+  }
+  .container {
+      /* max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff; *//* White background for the card */
+      /*border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/ /* Subtle shadow */
+     /* width: 300px;
+      text-align: center;
+      padding: 20px; */
+      display: flex;
+      gap: 50px;
+  }
+  /* h1{
+    text-align: center;
+    color: #333;
+    margin: 0;
+  } */
+  h2 {
+    margin: 0;
+    color: #333;
+  }
+  .entry {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    background-color: #fff; /* White background for the card */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+  }
+  .entry h2 {
+    margin-bottom: 10px;
+  }
+  .entry p {
+    margin: 5px 0;
+  }
+  .hhh{
+    position: absolute;
+    margin-left: 60px;
+    margin-top:-450px;
+  }
+</style>
+</head>
+<body>
+  <h1 class="hhh">Cargo Container History</h1>
+<div class="container">
+
+
+  <div class="entry">
+    <h2>Container ID: CNT123456</h2>
+    <p><strong>Origin:</strong> Port A</p>
+    <p><strong>Destination:</strong> Port B</p>
+    <p><strong>Departure Date:</strong> January 1, 2023</p>
+    <p><strong>Arrival Date:</strong> January 15, 2023</p>
+    <p><strong>Status:</strong> Delivered</p>
+    <p><strong>Notes:</strong> Container held for inspection at Port B for 3 days.</p>
+  </div>
+
+  <div class="entry">
+    <h2>Container ID: CNT789012</h2>
+    <p><strong>Origin:</strong> Port C</p>
+    <p><strong>Destination:</strong> Port D</p>
+    <p><strong>Departure Date:</strong> March 10, 2023</p>
+    <p><strong>Arrival Date:</strong> March 25, 2023</p>
+    <p><strong>Status:</strong> In Transit</p>
+    <p><strong>Notes:</strong> Scheduled arrival delayed due to weather conditions.</p>
+  </div>
+
+  <!-- Add more entries as needed -->
+
+</div>
+
+</body>
+</html>

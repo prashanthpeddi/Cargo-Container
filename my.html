@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style></style>
+<body>
+    <center>
+
+    <div class="main">
+
+        
+        <form>
+            <input type="text" placeholder="username" required>
+            <input type="submit">
+        </form>
+    </div>
+    </center>
+    <h1 id="ma"></h1>
+    <div>
+        <h2 id="one"></h2>
+        <h2 id="two"></h2>
+        <h2 id="three"></h2>
+        <h2 id="four"></h2>
+        <h2 id="five"></h2>
+    </div>
+    <script>
+ let data=[ 
+    {
+        "id": 1,
+        "Container_info": "Refrigerated",
+        "location": "Chicago",
+        "Humidity": 71.00,
+        "Temperature": 13.90,   
+    },
+    {
+        "id": 2,
+	"Container_info": "Tank",
+        "location": "Miami",
+        "Humidity": 34.30,
+        "Temperature": 27.21,
+        
+    },
+    {
+        "id": 3,
+        "Container_info": "Refrigerated",
+        "location": "Houston",
+        "Humidity": 76.16,
+        "Temperature": 18.22,
+    },
+    {
+        "id": 4,
+        "Container_info": "Open Top",
+        "location": "Houston",
+        "Humidity": 96.59,
+        "Temperature": 13.59,
+    },
+    {
+        "id": 5,
+        "Container_info": "Open Top",
+        "location": "Los Angeles",
+        "Humidity": 32.38,
+        "Temperature": 3.89,
+    },
+    {
+        "id": 6,
+        "Container_info": "Open Top",
+        "location": "Los Angeles",
+        "Humidity": 61.85,
+        "Temperature": 21.67,
+    },
+    {
+        "id": 7,
+        "Container_info": "Dry",
+        "location": "Los Angeles",
+        "Humidity": 63.28,
+        "Temperature": 5.00,
+    },
+    {
+        "id": 8,
+        "Container_info": "Dry",
+        "location": "Los Angeles",
+        "Humidity": 61.50,
+        "Temperature": 41.34,
+    },
+    {
+        "id": 9,
+        "Container_info": "Open Top",
+        "location": "Chicago",
+        "Humidity": 30.07,
+        "Temperature": 47.09,
+    },
+    {
+        "id": 10,
+        "Container_info": "Dry",
+        "location": "New York",
+        "Humidity": 95.74,
+        "Temperature": 0.67,
+    }
+];
+
+        var d = document.forms;
+var username;
+var x;
+        d[0].addEventListener("submit", function(e) {
+            e.preventDefault();
+          username = e.target[0].value;
+          var x=document.getElementById("ma")
+        x.innerHTML=username;
+          e.target[0].value = "";
+          for(var i=1;i<=data.length-1;i++){
+var x=data[username-1]
+            // console.log()
+            // console.log(data[username].Humidity)
+
+          }
+          var one=document.getElementById("one");
+          var two=document.getElementById("two");
+          var three=document.getElementById("three");
+          var four=document.getElementById("four");
+          var five=document.getElementById("five");
+
+          one.innerHTML="id : "+x.id;
+          two.innerHTML="Container_info : "+x.Container_info;
+          three.innerHTML="location : "+x.location;
+          four.innerHTML="Humidity : "+x.Humidity;
+          five.innerHTML="Temperature : "+x.Temperature;
+          
+          console.log(x)
+
+        });
+     
+    </script>
+    
+</body>
+</html>

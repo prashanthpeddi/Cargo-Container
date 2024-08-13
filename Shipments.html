@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipments Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .shipments-list {
+            width: 30%;
+            border-right: 1px solid #ccc;
+            padding-right: 20px;
+        }
+
+        .shipments-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .shipments-list li {
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .shipments-list li:hover {
+            background-color: #e1e1e1;
+        }
+
+        .container-details {
+            width: 70%;
+            padding-left: 20px;
+        }
+
+        .container-details #details p {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Shipments In Transit</h1>
+        <div class="shipments-list">
+            <ul id="container-list">
+                <!-- Container list items will be populated here by JavaScript -->
+            </ul>
+        </div>
+        <div class="container-details">
+            <h2>Container Details</h2>
+            <div id="details">
+                <p><strong>Container ID:</strong> <span id="container-id"></span></p>
+                <p><strong>Container_info:</strong> <span id="container_info"></span></p>
+                <p><strong>location:</strong> <span id="location"></span></p> 
+                <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+                <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const containers = [
+            {
+                id: 'c1',
+                container_info: 'Refrigerated',
+                location: 'Chicago',
+                humidity: '71.00%',
+                temperature: '13.90°c', 
+                
+            },
+            {
+                id: 'c2',
+                container_info: 'Tank',
+                location: 'Miami',
+                humidity: '34.30%',
+                temperature: '27.21°C',
+            },
+            {
+                id: 'c3',
+            container_info: 'Refrigerated',
+            location: 'Houston',
+            humidity: '76.16%',
+            temperature: '18.22°C',
+    }//,
+    // {
+    //     id: 'c4',
+    //     container_info: 'Open Top',
+    //     location: 'Houston',
+    //     humidity: '96.59%',
+    //     temperature: '13.59°C',
+    // },
+    // {
+    //     id: 'c5',
+    //     container_info : 'Open Top',
+    //     location : 'Los Angeles',
+    //     humidity: '32.38%',
+    //     temperature: '3.89°C',
+    // },
+    // {
+    //     id: 'c6',
+    //     container_info : 'Open Top',
+    //     location: 'Los Angeles',
+    //     humidity : '61.85%',
+    //     temperature: '21.67°C',
+    // },
+    // {
+    //     id: 'c7',
+    //     container_info: 'Dry',
+    //     location: 'Los Angeles',
+    //     humidity : '63.28%',
+    //     temperature: '5.00°C',
+    // },
+    // {
+    //     id: 'c8',
+    //     container_info: 'Dry',
+    //     location : 'Los Angeles',
+    //     humidity : '61.50%',
+    //     temperature: '41.34°C',
+    // },
+    // {
+    //     id: 'c9',
+    //     container_info: 'Open Top',
+    //     location : 'Chicago',
+    //     humidity: '30.07%',
+    //     temperature : '47.09°C',
+    // },
+    // {
+    //     id: 'c10',
+    //     container_info : 'Dry',
+    //     location : 'New York',
+    //     humidity : '95.74%',
+    //     temperature : '0.67°C',
+    // }
+            
+            
+            // Add more container objects here
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const containerList = document.getElementById('container-list');
+            const detailsContainer = document.getElementById('details');
+
+            // Populate the container list
+            containers.forEach(container => {
+                const listItem = document.createElement('li');
+                listItem.textContent = container.id;
+                listItem.addEventListener('click', () => displayContainerDetails(container));
+                containerList.appendChild(listItem);
+            });
+        });
+
+        function displayContainerDetails(container) {
+            document.getElementById('container-id').textContent = container.id;
+            document.getElementById('container_info').textContent = container.container_info;
+            document.getElementById('location').textContent = container.location;
+            document.getElementById('humidity').textContent = container.humidity;
+            document.getElementById('temperature').textContent = container.temperature;
+            
+        }
+    </script>
+</body>
+</html>
